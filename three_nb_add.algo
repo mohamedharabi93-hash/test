@@ -1,0 +1,9 @@
+function lengthOfSentence(sentence)
+    length := 0
+    i := 0
+    WHILE sentence[i] is not end_of_string DO
+        length := length + 1
+        i := i + 1
+    END_WHILE
+    RETURN length
+END_FUNCTION

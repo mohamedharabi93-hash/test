@@ -1,0 +1,18 @@
+algorithme phrase ()
+var 
+begin
+Read(sentence)
+j:= lengh(sentence)
+Write(lengh)
+a:=0
+IF sentence[a]=' 'THEN
+a:=a+1
+v:=0
+END_IF
+Write(a+1)
+for i in range (0,j) do
+
+IF sentence[i]=('a','e','u','i','o','y') do
+v=v+1
+ END_IF
+ end
