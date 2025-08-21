@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Category</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="container flex-center flex-column">
+    <h1>Select a Category</h1>
+
+    <button class="btn category-btn" data-category="general">General Knowledge</button>
+    <button class="btn category-btn" data-category="science">Science</button>
+    <button class="btn category-btn" data-category="history">History</button>
+    <button class="btn category-btn" data-category="sports">Sports</button>
+
+    <a class="btn" href="index.html">Back to Menu</a>
+  </div>
+
+  <script>
+    // No need for DOMContentLoaded because this script is at the end of <body>
+    const categoryButtons = document.querySelectorAll(".category-btn");
+    categoryButtons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const selectedCategory = e.target.dataset.category;
+        try {
+          localStorage.setItem("selectedCategory", selectedCategory);
+        } catch (err) {
+          console.warn("Could not access localStorage:", err);
+        }
+        window.location.href = "game.html";
+      });
+    });
+  </script>
+</body>
+</html>
